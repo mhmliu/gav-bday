@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Happy Birthday Gav &lt;3</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         WELCOME SCREEN
+    ======================================== -->
+
+    <div id="welcome-screen">
+
+
+        <!-- Floating decorations -->
+
+        <div class="birthday-decoration decoration-one">
+            🎈
+        </div>
+
+        <div class="birthday-decoration decoration-two">
+            🎈
+        </div>
+
+        <div class="birthday-decoration decoration-three">
+            🎀
+        </div>
+
+        <div class="birthday-decoration decoration-four">
+            💗
+        </div>
+
+        <div class="birthday-decoration decoration-five">
+            ✨
+        </div>
+
+        <div class="birthday-decoration decoration-six">
+            💕
+        </div>
+
+        <div class="birthday-decoration decoration-seven">
+            ✨
+        </div>
+
+
+        <!-- Confetti -->
+
+        <div class="confetti confetti-one"></div>
+        <div class="confetti confetti-two"></div>
+        <div class="confetti confetti-three"></div>
+        <div class="confetti confetti-four"></div>
+        <div class="confetti confetti-five"></div>
+        <div class="confetti confetti-six"></div>
+        <div class="confetti confetti-seven"></div>
+        <div class="confetti confetti-eight"></div>
+
+
+        <!-- Main welcome content -->
+
+        <div class="welcome-content">
+
+
+
+            <h1>
+                Happy Birthday Gav 💗
+            </h1>
+
+
+            <!-- Childhood photo -->
+
+            <div
+                class="birthday-photo"
+                onclick="openBirthday()"
+            >
+
+                <img
+                    src="images/gav-baby.jpg"
+                    alt="Gav as a child"
+                >
+
+
+                <div class="photo-overlay">
+
+                    <span>♡</span>
+
+                    <p>
+                        Click me
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Birthday cake -->
+
+        <div class="birthday-cake">
+
+            <div class="cake-candle">
+                🕯️
+            </div>
+
+            <div class="cake">
+                🎂
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         MAIN WEBSITE
+    ======================================== -->
+
+    <div id="main-content">
+
+
+        <div class="container">
+
+
+
+
+            <!-- ========================================
+                 GIFTS
+            ======================================== -->
+
+            <div class="gifts">
+
+
+                <!-- Birthday Note -->
+
+                <div
+                    class="gift"
+                    onclick="openGift('letter')"
+                >
+
+                    💌
+
+                    <p>
+                        Birthday Note
+                    </p>
+
+                </div>
+
+
+                <!-- Crossword -->
+
+                <div
+                    class="gift"
+                    onclick="openGift('crossword')"
+                >
+
+                    🧩
+
+                    <p>
+                        Crossword
+                    </p>
+
+                </div>
+
+
+                <!-- Secret / Songs -->
+
+                <div
+                    class="gift"
+                    onclick="openSongs()"
+                >
+
+                    ⭐
+
+                    <p>
+                        Secret
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Content appears here -->
+
+            <div id="message"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        function openBirthday() {
+
+            const welcome =
+                document.getElementById("welcome-screen");
+
+            const main =
+                document.getElementById("main-content");
+
+
+            /*
+                Show the actual website
+            */
+
+            main.style.display = "block";
+
+
+            /*
+                Fade out the welcome screen
+            */
+
+            welcome.classList.add("hide");
+
+
+            /*
+                Completely remove the welcome
+                screen after the animation
+            */
+
+            setTimeout(function () {
+
+                welcome.style.display = "none";
+
+            }, 800);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
