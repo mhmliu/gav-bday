@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gav &lt;3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <div class="birthday-decoration decoration-one">🎈</div>
+        <div class="birthday-decoration decoration-two">🎈</div>
+        <div class="birthday-decoration decoration-three">🎀</div>
+        <div class="birthday-decoration decoration-four">💗</div>
+        <div class="birthday-decoration decoration-five">✨</div>
+        <div class="birthday-decoration decoration-six">💕</div>
+        <div class="birthday-decoration decoration-seven">✨</div>
+
+        <div class="confetti confetti-one"></div>
+        <div class="confetti confetti-two"></div>
+        <div class="confetti confetti-three"></div>
+        <div class="confetti confetti-four"></div>
+        <div class="confetti confetti-five"></div>
+        <div class="confetti confetti-six"></div>
+        <div class="confetti confetti-seven"></div>
+        <div class="confetti confetti-eight"></div>
+
+        <div class="welcome-content">
+            <h1>Happy Birthday Gav 💗</h1>
+
+            <div class="birthday-photo" onclick="openBirthday()">
+                <img src="images/gav-baby.jpg" alt="Gav as a child">
+
+                <div class="photo-overlay">
+                    <span>♡</span>
+                    <p>Click me</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="birthday-cake">
+            <div class="cake-candle">🕯️</div>
+            <div class="cake">🎂</div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container">
+            <div class="gifts">
+                <div class="gift" onclick="openGift('letter')">
+                    💌
+                    <p>Birthday Note</p>
+                </div>
+
+                <div class="gift" onclick="openGift('crossword')">
+                    🧩
+                    <p>Crossword</p>
+                </div>
+
+                <div class="gift" onclick="openSongs()">
+                    ⭐
+                    <p>Secret</p>
+                </div>
+            </div>
+
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function openBirthday() {
+            const welcome = document.getElementById("welcome-screen");
+            const main = document.getElementById("main-content");
+
+            main.style.display = "block";
+            welcome.classList.add("hide");
+
+            setTimeout(() => {
+                welcome.style.display = "none";
+            }, 800);
+        }
+    </script>
+</body>
+</html>
